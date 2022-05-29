@@ -37,7 +37,7 @@ function result() {
   newStory=newStory.replace(':insertx:', randomValueFromArray(insertX));
   newStory=newStory.replace(':inserty:', randomValueFromArray(insertY));
   newStory=newStory.replace(':insertz:', randomValueFromArray(insertZ));
-
+  newStory=newStory.replace(':insertx:', randomValueFromArray(insertX));
 
   if(customName.value !== '') {
     const name = customName.value;
@@ -45,8 +45,8 @@ function result() {
   }
 
   if(document.getElementById("uk").checked) {
-    const weight = Math.round((300/14) + ' stone');
-    const temperature =  Math.round((94-32)*(5/9) + ' centigrade');
+    const weight = Math.round((300/14)) + ' stone';
+    const temperature =  Math.round((94-32)*(5/9))  + ' centigrade';
     newStory=newStory.replace('94 fahrenheit', temperature);
     newStory=newStory.replace('300 pounds', weight);
   }
